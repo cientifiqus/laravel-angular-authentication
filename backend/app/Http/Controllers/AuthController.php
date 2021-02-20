@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SignUpRequest;
-use App\User;
-
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -36,14 +35,11 @@ class AuthController extends Controller
         return $this->respondWithToken($token);
     }
 
-    public function test(){
-        return "test";
-    }
-
     public function signup(SignUpRequest $request)
     {
-        User::create($request->all());
-        return $this->login($request);
+        $user = User::create($request->all());
+        //return $this->login($request);
+        return $user;
     }
 
     /**
@@ -63,7 +59,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        auth()->logout();
+        auth()->Auth::logout();
 
         return response()->json(['message' => 'Successfully logged out']);
     }
