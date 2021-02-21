@@ -16,3 +16,17 @@ Route::group([
     Route::post('sendPasswordResetLink', 'App\Http\Controllers\ResetPasswordController@sendEmail');
     Route::post('resetPassword', 'App\Http\Controllers\ChangePasswordController@process');
 });
+
+Route::group([
+    'middleware' => 'auth:api',
+], function () {
+    Route::post('retrieveUser', function (Request $request) {
+        return $request->user();
+    });
+    Route::post('updateUser', 'App\Http\Controllers\UpdateUserController@updateUser');
+    Route::post('deleteUser', 'App\Http\Controllers\DeleteUserController@deleteUser');
+});
+
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});*/
