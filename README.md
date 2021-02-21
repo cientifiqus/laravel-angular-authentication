@@ -7,8 +7,8 @@
 
 <p>Based on Udemy course for JWT authentication <a href="https://github.com/bitfumes/laravel-angular-authentication">Github</a> - <a href="https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/">Udemy Course</a> </p>
 
-<p>Created by <a href="https://www.linkedin.com/in/damh/">Daniel A Montoya </a></p>
-<p><a href="https://github.com/montolla/laravel-angular-authentication">Github</a></p>
+<p>Created by: <a href="https://www.linkedin.com/in/damh/">Daniel A Montoya </a></p>
+<p>Github: <a href="https://github.com/montolla/laravel-angular-authentication">Laravel+angular</a></p>
 <p>Web: <a href=" www.montolla.tk">www.montolla.tk</a></p>
 
 <h2>Users module</h2>
