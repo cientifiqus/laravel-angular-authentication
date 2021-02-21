@@ -10,6 +10,20 @@ This a project for testing and learning Laravel+angular using JWT authentication
 <p>Created by <a href="https://www.linkedin.com/in/damh/">Daniel A Montoya </a></p>
 <p>Web: <a href=" www.montolla.tk">www.montolla.tk</a></p>
 
+<h2>Users module</h2>
+
+<p>The users module has a complete CRUD so you can create (singup), read (login) update and delete the user from the Frontend</p>
+
+<p>At the backend, you have the necesary API calls for the CRUD and also the JWT token handle embeded.</p>
+
+<p>Some API calls to the backend needs authorization using JWT token</p>
+
+<h2>Server</h2>
+
+<p>It is expected that the bakcend is located at http://127.0.0.1:8000 and the frontend at http://localhost:4200/ but this last one it is optional.</p>
+
+<p>Also, it is necesary that the backend server has CORS properly setup so the frontend can call it for API consume...</p>
+
 <h2>Password Reset</h2>
 In order to use rest password functionality, you need to set the email server first with this settings:
 <pre>
@@ -25,7 +39,8 @@ In order to use rest password functionality, you need to set the email server fi
 </pre>
 
 <hr>
-# Frontend
+
+<h2>Frontend</h2>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
@@ -55,6 +70,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <hr>
 
+<h2>backend</h2>
 
 <p><br><p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
