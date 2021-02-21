@@ -9,6 +9,13 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
@@ -19,5 +26,8 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false
-  }
+  },
+  "exclude": [
+    "node_modules",
+  ]
 }

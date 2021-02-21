@@ -1,4 +1,4 @@
-<div class="mt-4 col-8 offset-2">
+<div class="mt-4 col-10 offset-1">
   <div class="card">
     <div class="card-header">Profile</div>
     <div class="card-body">
@@ -19,7 +19,7 @@
         <div class="row mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <span name="email" placeholder="Email" class="form-control" id="inputEmail3">{{form.email}}</span>
+            <span name="email" placeholder="Email" class="form-control ng-valid" id="inputEmail3">{{form.email}}</span>
             <div class="alert alert-danger" [hidden]="!error.email">
               {{error.email}}
             </div>
@@ -63,8 +63,14 @@
         <div class="row mb-3">
           <label for="inputPhoto3" class="col-sm-2 col-form-label">Picture</label>
           <div class="col-sm-10">
-            <input type="text" name="photo" placeholder="Picture" class="form-control" id="inputPhoto3"
-              [(ngModel)]="form.photo">
+            <input class="form-control btn btn-primary btn-sm" accept="image/x-png,image/gif,image/jpeg" type="file" id="formFileMultiple" #file (change)="fileChange($event)" />
+          </div>
+        </div>
+        <div class="row mb-3" *ngIf="file_content">
+          <label for="inputPhoto3" class="col-sm-2 col-form-label">&nbsp;</label>
+          <div class="col-sm-10" >
+            <input type="hidden" name="photo" placeholder="Picture" class="form-control" id="inputPhoto3" [(ngModel)]="form.photo">
+            <img  width="150px" height="100%" class="rounded mx-auto d-block" [src]="_DomSanitizer.bypassSecurityTrustUrl(form.photo)"/>
             <div class="alert alert-danger" [hidden]="!error.photo">
               {{error.photo}}
             </div>
