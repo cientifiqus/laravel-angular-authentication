@@ -5,7 +5,7 @@
 <h2>About</h2>
 This a project for testing and learning Laravel+angular using JWT authentication method and MVC client->server model.
 
-<p>Based on Udemy course for JWT authentication https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/</p>
+<p>Based on Udemy course for JWT authentication <a href="https://github.com/bitfumes/laravel-angular-authentication">Github</a> <a href="https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/">Udemy Course</a> </p>
 
 <p>Created by <a href="https://www.linkedin.com/in/damh/">Daniel A Montoya </a></p>
 <p>Web: <a href=" www.montolla.tk">www.montolla.tk</a></p>
