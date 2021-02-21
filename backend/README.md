@@ -1,3 +1,29 @@
+<hr>
+<h1>About Laravel+angular Project</h1>
+<hr>
+
+<h2>About</h2>
+This a project for testing and learning Laravel+angular using JWT authentication method and MVC client->server model.
+Based on Udemy course for JWT authentication https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/
+
+Created by <a href="https://www.linkedin.com/in/damh/">Daniel A Montoya </a>
+Web: <a href=" www.montolla.tk">www.montolla.tk</a>
+
+<h2>Password Reset</h2>
+In order to use rest password functionality, you need to set the email server first with this settings:
+<pre>
+/**
+* Use this service to test http://mailtrap.io/.....
+* Over .env set this settings
+* MAIL_HOST=smtp.mailtrap.io
+* MAIL_USERNAME=357f3605c3eed9
+* MAIL_PASSWORD=a424605aaff236
+* MAIL_ENCRYPTION=tls
+* MAIL_FROM_ADDRESS="sysadmin@Laravel_plus_angular.io"
+*/
+</pre>
+
+<p><br><p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
