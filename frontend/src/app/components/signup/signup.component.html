@@ -1,0 +1,99 @@
+<div class="mt-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header">Register Here</div>
+    <div class="card-body">
+      <form #signupForm=ngForm (ngSubmit)="onSubmit()">
+        <div class="alert alert-danger" [hidden]="!menssage">
+          {{menssage}}
+        </div>
+        <div class="row mb-3">
+          <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="name" name="name" placeholder="Name" class="form-control" id="inputName3"
+              [(ngModel)]="form.name" required>
+              <div class="alert alert-danger" [hidden]="!error.name">
+                {{error.name}}
+              </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" placeholder="Email" class="form-control" id="inputEmail3"
+              [(ngModel)]="form.email" required>
+              <div class="alert alert-danger" [hidden]="!error.email">
+                {{error.email}}
+              </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" placeholder="Password" class="form-control" id="inputPassword3"
+              [(ngModel)]="form.password" required>
+              <div class="alert alert-danger" [hidden]="!error.password">
+                {{error.password}}
+              </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPasswordConfirmation3" class="col-sm-2 col-form-label">Confirm Password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password_confirmation" placeholder="Confirm Password" class="form-control" id="inputPasswordConfirmation3"
+              [(ngModel)]="form.password_confirmation" required>
+              <div class="alert alert-danger" [hidden]="!error.password_confirmation">
+                {{error.password_confirmation}}
+              </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPhone3" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input type="text" name="phone" placeholder="Phone" class="form-control" id="inputPhone3" [(ngModel)]="form.phone">
+            <div class="alert alert-danger" [hidden]="!error.phone">
+              {{error.phone}}
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputMovil3" class="col-sm-2 col-form-label">Movil</label>
+          <div class="col-sm-10">
+            <input type="text" name="movil" placeholder="Movil" class="form-control" id="inputMovil3" [(ngModel)]="form.movil">
+              <div class="alert alert-danger" [hidden]="!error.movil">
+                {{error.movil}}
+              </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputType3" class="col-sm-2 col-form-label">Type</label>
+          <div class="col-sm-10">
+            <select ng-model='nrSelect' class='form-control' name="type" placeholder="Type" class="form-control" id="inputType3" [(ngModel)]="form.type" required>
+              <option value="" selected disabled hidden>Choose here</option>
+              <option selected value='Guest'>Guest</option>
+              <option value='Employee'>Employee</option>
+              <option value='Owner'>Owner</option>
+            </select>
+            <div class="alert alert-danger" [hidden]="!error.type">
+              {{error.type}}
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPhoto3" class="col-sm-2 col-form-label">Picture</label>
+          <div class="col-sm-10">
+            <input type="text" name="photo" placeholder="Picture" class="form-control" id="inputPhoto3" [(ngModel)]="form.photo">
+            <div class="alert alert-danger" [hidden]="!error.photo">
+              {{error.photo}}
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-10 offset-2">
+            <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Sign up</button>
+            <a routerLink="/login" class="btn btn-info float-right">Sign in</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
