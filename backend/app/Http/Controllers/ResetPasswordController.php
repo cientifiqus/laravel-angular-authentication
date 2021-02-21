@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Mail\ResetPasswordMail;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Str;
 
 class ResetPasswordController extends Controller
 {
@@ -21,7 +24,8 @@ class ResetPasswordController extends Controller
     }
 
     public  function send($email){
-        Mail::to($email)->send(new ResetPasswordMail);
+        $token = $this->createToken($email);//to me used on password_resets table and be validaded on reset email sent to user...
+        Mail::to($email)->send(new ResetPasswordMail($token));
         /**
          * Use this service to test http://mailtrap.io/.....
          * Over .env set this settings
@@ -31,6 +35,24 @@ class ResetPasswordController extends Controller
          * MAIL_ENCRYPTION=tls
          * MAIL_FROM_ADDRESS="sysadmin@Laravel_plus_angular.io"
          */
+    }
+
+    public function createToken($email){
+        $oldToken = DB::table('password_resets')->where('email',$email)->first();
+        if($oldToken){
+            return $oldToken;
+        }
+        $token = Str::random(60);
+        $this->saveToken($token, $email);
+        return  $token;
+    }
+
+    public function saveToken($token,$email){
+        DB::table('password_resets')->insert([
+            'email' => $email,
+            'token' => $token,
+            'created_at' => Carbon::now()
+        ]);
     }
 
     public function validateEmail($email){
