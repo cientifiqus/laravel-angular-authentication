@@ -73,4 +73,8 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/getCategory`, data, this.getHttpHeaders());
   }
 
+  deleteCategory(data) {
+    return this.http.post(`${this.baseUrl}/deleteCategory`, data, this.getHttpHeaders());
+  }
+
 }

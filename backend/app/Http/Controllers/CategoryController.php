@@ -24,6 +24,13 @@ class CategoryController extends Controller
         return $Category;
     }
 
+    public function deleteCategory(editCategoryRequest $request)
+    {
+        $Category = Category::where('id', $request->id)->first();
+        $Category->delete();
+        return $Category;
+    }
+
     public function getCategory(getCategoryRequest $request)
     {
         $Category = Category::where('id', $request->id)->first();

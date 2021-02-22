@@ -17,15 +17,22 @@
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Description</th>
-              <th scope="col">Handle</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let element of elements;let indice=index">
               <th scope="row">{{indice+1}}</th>
               <td>{{element.name}}</td>
-              <td>{{element.description}}</td>
+              <td>
+                <span style="height:100%" name="description" placeholder="Description"
+                  id="inputDescription3">
+                  <pre>{{element.description}}</pre>
+                </span>
+              </td>
               <td><a [routerLink]="['/CategoryEdit', element.id]">Edit</a></td>
+              <td><a [routerLink]="['/CategoryDelete', element.id]">Delete</a></td>
             </tr>
           </tbody>
         </table>

@@ -14,6 +14,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { CategoryListComponent } from './modules/categories/category-list/category-list.component';
 import { CategoryCreateComponent } from './modules/categories/category-create/category-create.component';
 import { CategoryEditComponent } from './modules/categories/category-edit/category-edit.component';
+import { CategoryDeleteComponent } from './modules/categories/category-delete/category-delete.component';
 
 
 
@@ -28,7 +29,8 @@ import { CategoryEditComponent } from './modules/categories/category-edit/catego
     ResponseResetComponent,
     CategoryListComponent,
     CategoryCreateComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    CategoryDeleteComponent
   ],
   imports: [
     BrowserModule,
