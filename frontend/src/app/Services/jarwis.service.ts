@@ -57,4 +57,20 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/deleteUser`, data, this.getHttpHeaders());
   }
 
+  CategoryCreate(data) {
+    return this.http.post(`${this.baseUrl}/CategoryCreate`, data, this.getHttpHeaders());
+  }
+
+  retrieveCategories(data) {
+    return this.http.post(`${this.baseUrl}/retrieveCategories`, data, this.getHttpHeaders());
+  }
+
+  editCategory(data) {
+    return this.http.post(`${this.baseUrl}/editCategory`, data, this.getHttpHeaders());
+  }
+
+  getCategory(data) {
+    return this.http.post(`${this.baseUrl}/getCategory`, data, this.getHttpHeaders());
+  }
+
 }

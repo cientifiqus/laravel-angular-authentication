@@ -1,0 +1,35 @@
+<div class="mt-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header">Categories</div>
+    <div class="card-body">
+      <form #LoginForm=ngForm (ngSubmit)="onSubmit()">
+        <div class="alert alert-danger" [hidden]="!menssage">
+          {{menssage}}
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-10 offset-2">
+            <a routerLink="/CategoryCreate" class="btn btn-info float-right">Create One</a>
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let element of elements;let indice=index">
+              <th scope="row">{{indice+1}}</th>
+              <td>{{element.name}}</td>
+              <td>{{element.description}}</td>
+              <td><a [routerLink]="['/CategoryEdit', element.id]">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,10 @@ Route::group([
     });
     Route::post('updateUser', 'App\Http\Controllers\UpdateUserController@updateUser');
     Route::post('deleteUser', 'App\Http\Controllers\DeleteUserController@deleteUser');
+    Route::post('CategoryCreate', 'App\Http\Controllers\CategoryController@CategoryCreate');
+    Route::post('retrieveCategories', 'App\Http\Controllers\CategoryController@retrieveCategories');
+    Route::post('editCategory', 'App\Http\Controllers\CategoryController@editCategory');
+    Route::post('getCategory', 'App\Http\Controllers\CategoryController@getCategory');
 });
 
 /*Route::middleware('auth:api')->get('/user', function (Request $request) {

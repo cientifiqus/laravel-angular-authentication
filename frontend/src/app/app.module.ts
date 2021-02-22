@@ -11,6 +11,9 @@ import { ResponseResetComponent } from './components/password/response-reset/res
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { CategoryListComponent } from './modules/categories/category-list/category-list.component';
+import { CategoryCreateComponent } from './modules/categories/category-create/category-create.component';
+import { CategoryEditComponent } from './modules/categories/category-edit/category-edit.component';
 
 
 
@@ -22,7 +25,10 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     SignupComponent,
     ProfileComponent,
     RequestResetComponent,
-    ResponseResetComponent
+    ResponseResetComponent,
+    CategoryListComponent,
+    CategoryCreateComponent,
+    CategoryEditComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,9 @@ import { RequestResetComponent } from './components/password/request-reset/reque
 import { ResponseResetComponent } from './components/password/response-reset/response-reset.component';
 import { BeforeLoginService } from './Services/before-login.service';
 import { AfterLoginService } from './Services/after-login.service';
+import { CategoryListComponent } from './modules/categories/category-list/category-list.component';
+import { CategoryCreateComponent } from './modules/categories/category-create/category-create.component';
+import { CategoryEditComponent } from './modules/categories/category-edit/category-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -22,6 +25,21 @@ const appRoutes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'CategoryList',
+    component: CategoryListComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'CategoryCreate',
+    component: CategoryCreateComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'CategoryEdit/:id',
+    component: CategoryEditComponent,
     canActivate: [AfterLoginService]
   },
   {
