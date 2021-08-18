@@ -27,7 +27,7 @@
 
 <p>Also, that the backend server has CORS properly setup so the frontend can call it for API consume...</p>
 
-<h3>Server first setup</h3>
+<h3>Core first setup</h3>
 <pre>
 composer install
 composer update
@@ -103,7 +103,8 @@ Response:
 </pre>
 
 
-<h3>retrieveCategories</h3>
+<h3>RetrieveCategories</h3>
+<h3>RetrieveCategories</h3>
 <pre>
 POST /api/retrieveCategories
 Host: 127.0.0.1:8000
