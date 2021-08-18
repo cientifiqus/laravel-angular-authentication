@@ -12,6 +12,7 @@
 <li>MVC model</li>
 <li>Core->clients architecture.</li>
 <li>JWT authentication for the REST API</li>
+<li>Email based notification system for password reset</li>
 </u>
 <p></p>
 <p>Based on Udemy course for JWT authentication <a href="https://github.com/bitfumes/laravel-angular-authentication">Github</a> - <a href="https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/">Udemy Course</a> </p>
