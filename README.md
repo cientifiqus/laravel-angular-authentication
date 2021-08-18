@@ -1,9 +1,9 @@
 <hr>
-<h1>About Laravel+angular Project</h1>
+<h1>Larangular Project</h1>
 <hr>
 
 <h2>About</h2>
-<p>This a project for testing and learning Laravel+angular using JWT authentication method and MVC client->server model.</p>
+<p>This a project for testing and learning Laravel+angular using JWT authentication method and MVC with a core->clients model.</p>
 
 <p>There is a @TODO file on docsx format, that was added in wich it dictates the inicial authentication and CRUD for users module, later a BLOG and its Categories modules will added...</p>
 
@@ -15,17 +15,17 @@
 
 <h2>Users module</h2>
 
-<p>The users module has a complete CRUD so you can create (singup), read (login) update and delete the user from the Frontend</p>
+<p>The users module has a complete CRUD so you can create (singup), read (login), update (edit) and delete (remove) the users from the Frontend</p>
 
-<p>At the backend, you have the necesary API calls for the CRUD and also the JWT token handle embeded.</p>
+<p>At the backend, you have the necessary API calls for the CRUD and also the JWT token handle embedded.</p>
 
-<p>Some API calls to the backend needs authorization using JWT token</p>
+<p>Some API calls to the backend needs authorization using JWT token (bearer)</p>
 
 <h2>Server</h2>
 
-<p>It is expected that the bakcend is located at http://127.0.0.1:8000 and the frontend at http://localhost:4200/ but this last one it is optional.</p>
+<p>It was design on such was that the backend is located at http://127.0.0.1:8000 and the frontend at http://localhost:4200/ but this last one it is optional.</p>
 
-<p>Also, it is necesary that the backend server has CORS properly setup so the frontend can call it for API consume...</p>
+<p>Also, that the backend server has CORS properly setup so the frontend can call it for API consume...</p>
 
 <h3>Server first setup</h3>
 <pre>
@@ -56,6 +56,32 @@ ng serve
 
 <h2>REST Api</h2>
 
+<h3>SignUp</h3>
+<pre>
+POST /api/signup
+Host: 127.0.0.1:8000
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <token>
+Body:
+{
+    "name":"Pepe",
+    "phone":"123",
+    "movil":"897",
+    "type":"Employee",
+    "email":"pepe@montolla.tk",
+    "password":"pepe",
+    "password_confirmation":"pepe"
+
+}
+Response:
+{
+    "access_token": "<token>",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "user": "Pepe"
+}
+</pre>
 <h3>Login</h3>
 <pre>
 POST /api/login
@@ -75,7 +101,7 @@ Response:
     "user": "montolla"
 }
 </pre>
-3
+
 
 <h3>retrieveCategories</h3>
 <pre>
