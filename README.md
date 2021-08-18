@@ -21,6 +21,114 @@
 
 <p>Some API calls to the backend needs authorization using JWT token (bearer)</p>
 
+<h2>REST Api</h2>
+
+<h3>SignUp</h3>
+<pre>
+POST /api/signup
+Host: 127.0.0.1:8000
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <token>
+Body:
+{
+    "name":"Pepe",
+    "phone":"123",
+    "movil":"897",
+    "type":"Employee",
+    "email":"pepe@montolla.tk",
+    "password":"pepe",
+    "password_confirmation":"pepe"
+
+}
+Response:
+{
+    "access_token": "<token>",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "user": "Pepe"
+}
+</pre>
+
+<h3>Login</h3>
+<pre>
+POST /api/login
+Host: 127.0.0.1:8000
+Content-Type: application/json
+accept: application/json
+body: 
+{
+    "email":"montolla@montolla.tk",
+    "password":"montolla"
+}
+Response:
+{
+    "access_token": "<token>",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "user": "montolla"
+}
+
+<h3>CurrentUser</h3>
+<pre>
+POST /api/me
+Host: 127.0.0.1:8000
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <token>
+Body:
+Response:
+{
+    "id": 2,
+    "name": "Pepe",
+    "email": "pepe@montolla.tk",
+    "email_verified_at": null,
+    "created_at": "2021-08-18T15:27:35.000000Z",
+    "updated_at": "2021-08-18T15:27:35.000000Z",
+    "phone": "123",
+    "movil": "897",
+    "type": "Employee",
+    "photo": null
+}
+</pre>
+
+</pre>
+
+
+<h3>RetrieveCategories</h3>
+<pre>
+POST /api/retrieveCategories
+Host: 127.0.0.1:8000
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <token>
+Body:
+Response:
+[
+    {
+        "id": 1,
+        "name": "asdf2",
+        "description": "11112",
+        "created_at": "2021-08-18T13:29:12.000000Z",
+        "updated_at": "2021-08-18T13:29:18.000000Z"
+    }
+]
+</pre>
+
+<h2>Password Reset</h2>
+In order to use rest password functionality, you need to set the email server first with this settings:
+<pre>
+/**
+* Use this service to test http://mailtrap.io/.....
+* Over .env set this settings
+* MAIL_HOST=smtp.mailtrap.io
+* MAIL_USERNAME=357f3605c3eed9
+* MAIL_PASSWORD=a424605aaff236
+* MAIL_ENCRYPTION=tls
+* MAIL_FROM_ADDRESS="sysadmin@Laravel_plus_angular.io"
+*/
+</pre>
+
 <h2>Server</h2>
 
 <p>It was design on such was that the backend is located at http://127.0.0.1:8000 and the frontend at http://localhost:4200/ but this last one it is optional.</p>
@@ -51,91 +159,6 @@ npm install
 
 ng update
 ng serve
-</pre>
-
-
-<h2>REST Api</h2>
-
-<h3>SignUp</h3>
-<pre>
-POST /api/signup
-Host: 127.0.0.1:8000
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer <token>
-Body:
-{
-    "name":"Pepe",
-    "phone":"123",
-    "movil":"897",
-    "type":"Employee",
-    "email":"pepe@montolla.tk",
-    "password":"pepe",
-    "password_confirmation":"pepe"
-
-}
-Response:
-{
-    "access_token": "<token>",
-    "token_type": "bearer",
-    "expires_in": 3600,
-    "user": "Pepe"
-}
-</pre>
-<h3>Login</h3>
-<pre>
-POST /api/login
-Host: 127.0.0.1:8000
-Content-Type: application/json
-accept: application/json
-body: 
-{
-    "email":"montolla@montolla.tk",
-    "password":"montolla"
-}
-Response:
-{
-    "access_token": "<token>",
-    "token_type": "bearer",
-    "expires_in": 3600,
-    "user": "montolla"
-}
-</pre>
-
-
-<h3>RetrieveCategories</h3>
-<pre>
-POST /api/retrieveCategories
-Host: 127.0.0.1:8000
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer <token>
-Body:
-Response:
-[
-    {
-        "id": 1,
-        "name": "asdf2",
-        "description": "11112",
-        "created_at": "2021-08-18T13:29:12.000000Z",
-        "updated_at": "2021-08-18T13:29:18.000000Z"
-    }
-]
-</pre>
-
-
-<h2>Password Reset</h2>
-In order to use rest password functionality, you need to set the email server first with this settings:
-<pre>
-/**
-* Use this service to test http://mailtrap.io/.....
-* Over .env set this settings
-* MAIL_HOST=smtp.mailtrap.io
-* MAIL_USERNAME=357f3605c3eed9
-* MAIL_PASSWORD=a424605aaff236
-* MAIL_ENCRYPTION=tls
-* MAIL_FROM_ADDRESS="sysadmin@Laravel_plus_angular.io"
-*/
 </pre>
 
 <hr>
