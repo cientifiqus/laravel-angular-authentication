@@ -104,7 +104,6 @@ Response:
 
 
 <h3>RetrieveCategories</h3>
-<h3>RetrieveCategories</h3>
 <pre>
 POST /api/retrieveCategories
 Host: 127.0.0.1:8000
