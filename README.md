@@ -23,6 +23,47 @@
 
 <h2>REST Api</h2>
 
+
+<h3>JWT (Json Web Token)</h3>
+<h4>Encoded</h4>
+
+Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTMwMzI4NSwiZXhwIjoxNjI5MzA2ODg1LCJuYmYiOjE2MjkzMDMyODUsImp0aSI6IkZkZVVEU1E4OFQ4ZmNBaTEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._lQmy6fRkUeVUD6nA2Kuf_rk_dmo1WLd1XkwdiooksI
+
+
+<h4>Decoded</h4>
+
+Header:ALGORITHM & TOKEN TYPE
+<pre>
+{
+"typ": "JWT",
+"alg": "HS256"
+}
+</pre>
+
+PAYLOAD:DATA
+<pre>
+{
+"iss": "http://127.0.0.1:8000/api/login",
+"iat": 1629303285,
+"exp": 1629306885,
+"nbf": 1629303285,
+"jti": "FdeUDSQ88T8fcAi1",
+"sub": 1,
+"prv": "23bd5c8949f600adb39e701c400872db7a5976f7"
+}
+</pre>
+
+VERIFY SIGNATURE
+<pre>
+HMACSHA256(
+base64UrlEncode(header) + "." +
+base64UrlEncode(payload),
+
+your-256-bit-secret
+
+) secret base64 encoded
+</pre>
+
 <h3>SignUp</h3>
 <pre>
 POST /api/signup
