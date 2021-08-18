@@ -3,9 +3,16 @@
 <hr>
 
 <h2>About</h2>
-<p>This a project for testing and learning Laravel+angular using JWT authentication method and MVC with a core->clients model.</p>
-
-<p>There is a @TODO file on docsx format, that was added in wich it dictates the inicial authentication and CRUD for users module, later a BLOG and its Categories modules will added...</p>
+<p>This is a project for testing and learning Laravel+angular.</p>
+<p>Features:</p>
+<u>
+<li>Backend made on Laravel</li>
+<li>Frontend made on Angular</li>
+<li>Single Page load</li>
+<li>MVC model</li>
+<li>Core->clients architecture.</li>
+<li>JWT authentication for the REST API</li>
+</u>
 
 <p>Based on Udemy course for JWT authentication <a href="https://github.com/bitfumes/laravel-angular-authentication">Github</a> - <a href="https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/">Udemy Course</a> </p>
 
@@ -30,9 +37,9 @@
 Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTMwMzI4NSwiZXhwIjoxNjI5MzA2ODg1LCJuYmYiOjE2MjkzMDMyODUsImp0aSI6IkZkZVVEU1E4OFQ4ZmNBaTEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._lQmy6fRkUeVUD6nA2Kuf_rk_dmo1WLd1XkwdiooksI
 
 
-<h4>Decoded</h4>
+<h4>Decoded with https://jwt.io</h4>
 
-Header:ALGORITHM & TOKEN TYPE
+Header: ALGORITHM & TOKEN TYPE
 <pre>
 {
 "typ": "JWT",
@@ -40,7 +47,7 @@ Header:ALGORITHM & TOKEN TYPE
 }
 </pre>
 
-PAYLOAD:DATA
+PAYLOAD: DATA
 <pre>
 {
 "iss": "http://127.0.0.1:8000/api/login",
