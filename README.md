@@ -27,6 +27,32 @@
 
 <p>Also, it is necesary that the backend server has CORS properly setup so the frontend can call it for API consume...</p>
 
+<h3>Server first setup</h3>
+<pre>
+composer install
+composer update
+
+php artisan key:generate
+php artisan jwt:secret
+php artisan cache:clear
+php artisan config:clear
+
+php artisan migrate
+php artisan db:seed
+
+php artisan serve
+</pre>
+
+
+<h3>Client first setup</h3>
+<pre>
+npm install -g @angular/cli
+npm install
+
+ng update
+ng serve
+</pre>
+
 <h2>Password Reset</h2>
 In order to use rest password functionality, you need to set the email server first with this settings:
 <pre>
