@@ -13,7 +13,7 @@
 <li>Core->clients architecture.</li>
 <li>JWT authentication for the REST API</li>
 </u>
-
+<p></p>
 <p>Based on Udemy course for JWT authentication <a href="https://github.com/bitfumes/laravel-angular-authentication">Github</a> - <a href="https://www.udemy.com/course/angular-laravel-single-page-app-with-authentication-and-password-reset/">Udemy Course</a> </p>
 
 <p>Created by: <a href="https://www.linkedin.com/in/damh/">Daniel A Montoya </a></p>
