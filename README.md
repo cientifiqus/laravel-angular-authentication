@@ -68,6 +68,7 @@ Response:
     "expires_in": 3600,
     "user": "montolla"
 }
+</pre>
 
 <h3>Logout</h3>
 <pre>
@@ -81,6 +82,7 @@ Response:
 {
     "message": "Successfully logged out"
 }
+</pre>
 
 <h3>CurrentUser</h3>
 <pre>
@@ -103,8 +105,6 @@ Response:
     "type": "Employee",
     "photo": null
 }
-</pre>
-
 </pre>
 
 
