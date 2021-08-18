@@ -53,6 +53,51 @@ ng update
 ng serve
 </pre>
 
+
+<h2>REST Api</h2>
+
+<h3>Login</h3>
+<pre>
+POST /api/login
+Host: 127.0.0.1:8000
+Content-Type: application/json
+accept: application/json
+body: 
+{
+    "email":"montolla@montolla.tk",
+    "password":"montolla"
+}
+Response:
+{
+    "access_token": "<token>",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "user": "montolla"
+}
+</pre>
+3
+
+<h3>retrieveCategories</h3>
+<pre>
+POST /api/retrieveCategories
+Host: 127.0.0.1:8000
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <token>
+Body:
+Response:
+[
+    {
+        "id": 1,
+        "name": "asdf2",
+        "description": "11112",
+        "created_at": "2021-08-18T13:29:12.000000Z",
+        "updated_at": "2021-08-18T13:29:18.000000Z"
+    }
+]
+</pre>
+
+
 <h2>Password Reset</h2>
 In order to use rest password functionality, you need to set the email server first with this settings:
 <pre>
