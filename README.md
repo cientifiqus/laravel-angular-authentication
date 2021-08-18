@@ -69,6 +69,19 @@ Response:
     "user": "montolla"
 }
 
+<h3>Logout</h3>
+<pre>
+POST /api/logout
+Host: 127.0.0.1:8000
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <token>
+Body:
+Response:
+{
+    "message": "Successfully logged out"
+}
+
 <h3>CurrentUser</h3>
 <pre>
 POST /api/me
